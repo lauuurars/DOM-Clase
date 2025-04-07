@@ -11,6 +11,15 @@ let titulo = document.getElementById('titulo');
 console.log(titulo); //se muestra el contenido html del elemento titulo
 */
 
+/* ------------------ Modificar texto en el html desde JS
+
+let titulo = document.getElementById('titulo'); //se selecciona el elemento por su id titulo
+titulo.innerText = 'Hola Mundo'; //se cambia el texto del elemento titulo por Hola Mundo
+console.log(titulo); 
+
+*/
+
+
 /** 1.2. Seleccionar x clase
  * 1. Seleccionar el div por su clase main-div 
  * 2. Mostrar su contenido en consola
