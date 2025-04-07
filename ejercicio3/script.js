@@ -17,3 +17,37 @@
     * 6. Si los inputs no estan vacios, guarda los valores en el arreglo usuario
     * 8. Muestra por consola el arreglo usuario
  */
+
+//--------------- Obtenemos nuestras variables (inputs)
+
+let nombre = document.querySelector('#nombre');
+let apellido = document.querySelector('#apellido');
+let email = document.querySelector('#email');
+let boton = document.querySelector("#boton");
+
+console.log(nombre, apellido, email, boton);
+
+//--------------- Creamos la funcion que procesa el usuario
+
+function procesarUsuario(e) {
+
+   e.preventDefault(); // Evitamos el comportamiento por defecto del formulario, mantiene los datos ingresados en la consola
+   // Nombramos nuevas variables para obtener el valor de los inputs
+   let usuario = []
+   let nombreValor = nombre.value;
+   let apellidoValor = apellido.value;
+   let nombreCompleto = nombreValor + " " + apellidoValor;
+   let emailValor = email.value; 
+   
+   if ((nombreValor === "")||(apellidoValor === "")||(emailValor === "")) {
+      alert("Por favor ingresa todos los campos :p");
+   } else {
+      // Creamos el arreglo usuario y guardamos los valores
+      usuario.push(nombreValor, apellidoValor, emailValor);
+      console.log("Arreglo de Usuario: ", usuario); 
+      alert ("Nombre Completo: "+nombreCompleto+" y el Email es: "+emailValor+" :3");
+   }
+
+}
+
+boton.addEventListener('click', procesarUsuario);
