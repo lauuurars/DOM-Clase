@@ -15,18 +15,39 @@
 
   // Capturar los  elementos 
 
+let contenedor = document.querySelector('#contenedor')
+let parrafo1 = document.querySelector('#parrafo1')
+let parrafo2 = document.querySelector('#parrafo2')
 
   // Nodo padre
 
+  console.log(parrafo1.parentNode.tagName) //mostramos nodo padre (div)
 
   // Hijos del contenedor
 
+  console.log(contenedor.children[0],contenedor.children[1],contenedor.children[2]) //mostramos los hijos del contenedor (nodos hijos)
+//usamos los [] para acceder a cada hijo del contenedor
 
   // Primer y último hijo
 
+console.log(contenedor.firstElementChild) //mostramos el primer hijo de div contenedor (h1)
+console.log(contenedor.lastElementChild) //mostramos el último hijo (p)
 
   // Hermanos
-   
+
+    console.log("Hermanos")
+    console.log(parrafo1.nextElementSibling) //mostramos el siguiente hermano de parrafo1 (parrafo2)
+    console.log(parrafo2.previousElementSibling) //mostramos el hermano anterior de parrafo2 (parrafo1)
 
   // Recorrer la lista de frutas con el DOM
 
+let frutas = document.querySelector('#frutas') //declaramos variable frutas
+console.log(frutas) 
+let hijos = frutas.children //capturamos los hijos de la lista de frutas (li)
+console.log(hijos)
+
+//recorrer el arreglo o lista con for 
+
+for (const elemento of hijos) {
+    console.log(elemento.textContent) //mostramos el contenido de cada elemento (li)
+}
